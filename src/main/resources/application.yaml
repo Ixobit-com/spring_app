@@ -3,9 +3,9 @@ spring:
     pathmatch:
       matching-strategy: ant_path_matcher
   datasource:
-    url: jdbc:postgresql://localhost:5432/spring_app
+    url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
-    password: dapsYzsv1
+    password: postgres
     hikari:
       minimumIdle: 5
       maximumPoolSize: 10
