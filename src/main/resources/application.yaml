@@ -1,0 +1,25 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring_app
+    username: postgres
+    password: dapsYzsv1
+    hikari:
+      minimumIdle: 5
+      maximumPoolSize: 10
+      max-lifetime: 1200000
+    driver-class-name: org.postgresql.Driver
+
+  liquibase.change-log: classpath:/db/changelog/changelog_master.xml
+logging:
+  level:
+    liquibase: INFO
+
+jwt:
+  token:
+    secret: secret
+    expired: 36000000
+  refreshToken:
+    expired: 6048000000
